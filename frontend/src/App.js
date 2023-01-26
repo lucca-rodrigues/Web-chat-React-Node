@@ -5,12 +5,16 @@ function App() {
   const [socket, setSocket] = useState(null);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const [response, setResponse] = useState("");
 
   useEffect(() => {
     const socket = openSocket("http://localhost:8000");
     setSocket(socket);
     socket.on("message", (msg) => {
       setMessages((prevMsgs) => [...prevMsgs, msg]);
+    });
+    socket.on("response", (res) => {
+      setResponse(res);
     });
     return () => {
       socket.disconnect();
@@ -29,6 +33,7 @@ function App() {
           <li key={index}>{msg}</li>
         ))}
       </ul>
+      <p>{response}</p>
       <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
       <button onClick={sendMessage}>Send</button>
     </div>
