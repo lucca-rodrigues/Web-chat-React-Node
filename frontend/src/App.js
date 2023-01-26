@@ -25,8 +25,8 @@ function App() {
   return (
     <div>
       <ul>
-        {messages.map((msg, idx) => (
-          <li key={idx}>{msg}</li>
+        {messages.map((msg, index) => (
+          <li key={index}>{msg}</li>
         ))}
       </ul>
       <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
