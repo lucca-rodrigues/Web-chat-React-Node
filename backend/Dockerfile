@@ -6,7 +6,7 @@ COPY . .
 
 RUN yarn
 
-RUN yarn start
-
 EXPOSE 3333
 
+
+CMD [ "yarn", "start" ]
