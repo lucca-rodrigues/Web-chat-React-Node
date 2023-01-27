@@ -2,9 +2,15 @@
   width: 80%;
   margin: 0 auto;
   background-image: url("../public/whatsapp-bg-dark.jpg");
-  padding: 20px;
+  padding: 50px;
   border-radius: 5px;
-  min-height: 300px;
+  height: 500px;
+  overflow-y: scroll;
+  margin: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .messages-container {
@@ -118,4 +124,9 @@
 
 .message-received {
   grid-column: 1 / 2;
+}
+
+.user-name {
+  width: 100%;
+  display: flex !important;
 }
