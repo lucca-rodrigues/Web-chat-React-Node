@@ -4,6 +4,7 @@
   background-image: url("../public/whatsapp-bg-dark.jpg");
   padding: 20px;
   border-radius: 5px;
+  min-height: 300px;
 }
 
 .messages-container {

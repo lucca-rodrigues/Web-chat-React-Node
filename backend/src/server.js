@@ -20,6 +20,12 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send({
+    response: "Status ok!",
+  });
+});
+
 server.listen(3333, () => {
   console.log("Server started on port 3333");
 });
