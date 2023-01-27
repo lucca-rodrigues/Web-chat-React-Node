@@ -6,4 +6,4 @@
 
 # Documentation
 
-- To execute run `chmod +x reset.sh` and `./start.sh`
+- To execute run `docker-compose up -d` and go to `http://localhost:3000`

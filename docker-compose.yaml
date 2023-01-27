@@ -1,7 +1,13 @@
 version: "3.1"
 services:
+  resetImages:
+    image: alpine
+    command: sh start.sh
+    entrypoint: [sh, start.sh]
   backend:
     build: ./backend
+    depends_on:
+      - resetImages
     ports:
       - "3333:3333"
     volumes:
@@ -9,6 +15,8 @@ services:
 
   frontend:
     build: ./frontend
+    depends_on:
+      - resetImages
     ports:
       - "3000:3000"
     volumes:

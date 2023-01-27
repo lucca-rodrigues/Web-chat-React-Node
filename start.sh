@@ -24,8 +24,5 @@ docker image ls
 echo "Show current containers"
 docker ps -a
 
-
-docker-compose up -d
-
 # Run chmod +x reset.sh and ./reset.sh to execute
 
