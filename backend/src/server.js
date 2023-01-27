@@ -15,11 +15,10 @@ app.use(
 
 io.on("connection", (socket) => {
   console.log("New client connected");
-  socket.on("message", (msg) => {
-    console.log(`Message received: ${msg}`);
-    io.emit("message", msg);
-
-    socket.emit("response", "Response to message received");
+  socket.on("message", (data) => {
+    const { username, message } = data;
+    console.log(`Message received from ${username}: ${message}`);
+    io.emit("message", `${username}: ${message}`);
   });
 
   socket.on("disconnect", () => {
