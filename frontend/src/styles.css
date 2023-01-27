@@ -1,7 +1,7 @@
 .chat-container {
   width: 80%;
   margin: 0 auto;
-  background-color: #e5fce8;
+  background-image: url("../public/whatsapp-bg-dark.jpg");
   padding: 20px;
   border-radius: 5px;
 }
